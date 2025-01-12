@@ -1,7 +1,7 @@
 /* les variables */
 
 /* end les variables */
-
+/* Start global rules */
 *{
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -12,3 +12,111 @@ body{
   font-optical-sizing: auto;
   font-style: normal;
 }
+.parent{
+  background: #d8d5d5;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fe3;
+}
+/* small */
+@media (min-width: 768px){
+  .container{
+    width: 750px;
+  }
+}
+/* medium */
+@media(min-width: 992px){
+  .container{
+    width: 970px;
+  }
+}
+/* large */
+@media(min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
+/* end global rules */
+/* start header */
+.header{
+  padding: 20px;
+}
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo{
+  width: 100px;
+}
+.header .links{
+  position: relative;
+}
+.header .links .icon{
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  
+  cursor: pointer;
+}
+.header .links .icon span{
+  background-color: green;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon:hover span:nth-child(2){
+  width: 100%;
+}
+.header .links .icon span:first-child{
+  width: 100%;
+}
+.header .links .icon span:nth-child(2){
+  width: 80%;
+  transition: 0.3s;
+}
+.header .links .icon span:last-child{
+  width: 100%;
+}
+.header .links ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #6bcac5;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 10px);
+  display: none;
+}
+.header .links ul::before{
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #6bcac5 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #053973;
+  transition: 0.3s;
+}
+.header .links ul li a:hover{
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{
+  border-bottom: 1px solid #fff;
+}
+
+/* end header */
