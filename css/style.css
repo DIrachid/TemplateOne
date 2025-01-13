@@ -1,5 +1,9 @@
 /* les variables */
-
+:root{
+  --main-color : #09497f;
+  --secound-color : #6bcac5;
+  --white-color : #fff;
+}
 /* end les variables */
 /* Start global rules */
 *{
@@ -11,9 +15,6 @@ body{
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
-.parent{
-  background: #d8d5d5;
 }
 .container{
   padding-left: 15px;
@@ -51,7 +52,7 @@ body{
   align-items: center;
 }
 .header .logo{
-  width: 100px;
+  width: 40px;
 }
 .header .links{
   position: relative;
@@ -61,7 +62,6 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  
   cursor: pointer;
 }
 .header .links .icon span{
@@ -86,12 +86,13 @@ body{
   list-style: none;
   margin: 0;
   padding: 0;
-  background: #6bcac5;
+  background: var(--secound-color);
   position: absolute;
   right: 0;
   min-width: 200px;
   top: calc(100% + 10px);
   display: none;
+  z-index: 1;
 }
 .header .links ul::before{
   content: "";
@@ -100,7 +101,7 @@ body{
   border-color: transparent transparent #6bcac5 transparent;
   position: absolute;
   right: 5px;
-  top: -20px;
+  top: -22px;
 }
 .header .links:hover ul {
   display: block;
@@ -117,6 +118,32 @@ body{
 }
 .header .links ul li:not(:last-child) a{
   border-bottom: 1px solid #fff;
+}
+.landing{
+  background-image: url(../images/pexels-pixabay-417173.jpg);
+  background-size: cover;
+  height: calc(100vh - 80px);
+  position: relative;
+}
+.landing .intro-text h1{
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .intro-text p{
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.landing .intro-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
 }
 
 /* end header */
