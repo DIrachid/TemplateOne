@@ -22,7 +22,7 @@ body{
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  background: rgb(250, 249, 249);
+  background: rgb(248, 245, 245);
 }
 /* small */
 @media (min-width: 768px){
@@ -265,3 +265,110 @@ body{
     display: none;
   }
 }
+/* start portfolio */
+.portfolio{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.portfolio .portfolio-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+.portfolio .portfolio-content .card{
+  background-color: #fefefe;
+}
+.portfolio .portfolio-content .card img{
+  max-width: 100%;
+}
+.portfolio .portfolio-content .card .info{
+  padding: 20px;
+}
+.portfolio .portfolio-content .card .info h3{
+  margin: 0;
+}
+.portfolio .portfolio-content .card .info p{
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+@media (max-width:767px){
+  .portfolio .portfolio-content .card{
+    text-align: center;
+  }
+}
+/* end portfolio */
+/* start about */
+.about{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.about .about-content{
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about .about-content .images{
+  position: relative;
+  width: 250px;
+  height: 375px;
+  z-index: 1;
+}
+.about .about-content .images img{
+  max-width: 100%;
+}
+.about .about-content .images::before{
+  content: '';
+  position: absolute;
+  background: #d7d8da;
+  width: 100px;
+  height: calc(100% + 40px);
+  top: -20px;
+  left: -10px;
+  z-index: -1;
+}
+.about .about-content .images::after{
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 240px;
+  /* background-color: red; */
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  right: -115px;
+  z-index: -1;
+  top: -20px;
+}
+.about .about-content .textes{
+  flex-basis: calc(100% - 500px);
+}
+.about .about-content .textes p:first-of-type{
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.about .about-content .textes hr{
+  width: 50%;
+  display: inline-block;
+  border-color: var(--secound-color);
+}
+.about .about-content .textes p:last-of-type{
+  font-weight: 400;
+  line-height: 1.6;
+  color: #777;
+}
+@media(max-width:991px){
+  .about .about-content{
+    flex-direction: column;
+    text-align: center;
+  }
+  .about .about-content .images::after,
+  .about .about-content .images::before{
+    display: none;
+  }
+  .about .about-content .images{
+    margin: 0 auto 60px;
+  }
+}
+/* end about */
