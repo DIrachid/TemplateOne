@@ -372,3 +372,61 @@ body{
   }
 }
 /* end about */
+/* start contact */
+.contact{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.contact .info{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.contact .info .label{
+  font-weight: 800;
+  font-size: 30px;
+  color:#777;
+  letter-spacing: -2px;
+}
+.contact .info a{
+  display: block;
+  font-weight: 800;
+  font-size: 30px;
+  text-decoration: none;
+  color: #6bcac5;
+}
+.contact .info .social{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.contact .info .social i{
+  margin-left: 9px;
+  color: var(--main-color);
+}
+@media(max-width:767px) {
+  .contact .info a{
+    font-size: 20px;
+  }
+  .contact .info .label{
+    font-size: 25px;
+  }
+}
+/* end contact */
+/* start footer */
+.footer{
+  background: var(--main-color);
+  padding: 20px 10px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+span{
+  font-weight: bold;
+  cursor: pointer;
+}
+span:hover{
+  color: var(--secound-color);
+}
+/* end footer */
